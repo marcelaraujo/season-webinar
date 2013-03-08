@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<name>contact</name>
+	<method>post</method>
+	<action>/</action>
+	<class>form-horizontal well</class>
+	<enctype>application/x-www-form-urlencoded</enctype>
+	<elementFilters>
+		<trim>StringTrim</trim>
+	</elementFilters>
+	<elements>
+		<username>
+			<type>text</type>
+			<options>
+				<label>Test</label>
+				<required>true</required>
+				<validators>
+					<notempty>
+						<validator>NotEmpty</validator>
+						<options>
+							<messages>
+								<isEmpty>An username is required</isEmpty>
+							</messages>
+						</options>
+					</notempty>
+					<strlen>
+						<validator>StringLength</validator>
+						<options>
+							<min>4</min>
+							<max>50</max>
+							<messages>
+								<stringLengthTooShort>Is too short</stringLengthTooShort>
+								<stringLengthTooLong>is too much long</stringLengthTooLong>
+							</messages>
+						</options>
+					</strlen>
+				</validators>
+			</options>
+		</username>
+		<lastname>
+			<type>text</type>
+			<options>
+				<label>Test 1</label>
+				<value>Valor 1</value>
+				<allowEmpty>true</allowEmpty>
+			</options>
+		</lastname>
+		<password>
+			<type>password</type>
+			<options>
+				<label>Password</label>
+			</options>
+		</password>
+		<select>
+			<type>select</type>
+			<options>
+				<label>Select</label>
+				<multiOptions>
+					<option1>
+						<key>1</key>
+						<value>Test</value>
+					</option1>
+					<option2>
+						<key>2</key>
+						<value>Test 2</value>
+					</option2>
+				</multiOptions>
+			</options>
+		</select>
+		<radio>
+			<type>radio</type>
+			<options>
+				<label>Radio</label>
+				<multiOptions>
+					<option1>
+						<key>1</key>
+						<value>Test</value>
+					</option1>
+					<option2>
+						<key>2</key>
+						<value>Test 2</value>
+					</option2>
+				</multiOptions>
+			</options>
+		</radio>
+		<submit>
+			<type>button</type>
+			<options>
+				<label>Send</label>
+				<buttonType>primary</buttonType>
+				<icon>ok-circle icon-white</icon>
+			</options>
+		</submit>
+	</elements>
+</form>

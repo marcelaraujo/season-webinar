@@ -1,0 +1,36 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+	<head>
+		<?php
+			$this->headTitle( "Zend Form" );
+
+			$this->headLink()
+				->appendStylesheet( 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' )
+				->appendStylesheet( 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' )
+				->appendStylesheet( $this->baseUrl( '/resources/libs/bootstrap/css/bootstrap.min.css' ) )
+				->appendStylesheet( $this->baseUrl( '/resources/libs/bootstrap/css/bootstrap-responsive.min.css' ) )
+				->appendStylesheet( $this->baseUrl( '/resources/css/contact.css' ) );
+
+			$this->headScript()
+				->setAllowArbitraryAttributes(true)
+				->appendFile( $this->baseUrl( '/resources/libs/jquery/jquery-1.9.1.min.js' ), 'text/javascript' )
+				->appendFile( $this->baseUrl( '/resources/libs/bootstrap/js/bootstrap.min.js' ), 'text/javascript' );
+
+			echo $this->headTitle() . $this->headLink();
+		?>
+	</head>
+	<body>
+		<div id="content">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+						<div id="main">
+							<?php echo $this->form; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php echo $this->headScript(); ?>
+	</body>
+</html>

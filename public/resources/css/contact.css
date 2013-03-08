@@ -1,0 +1,17 @@
+#main {
+		margin: 0 auto;
+		margin-top: 50px;
+		max-width: 400px;
+}
+
+.form-horizontal .control-label {
+	width: 90px;
+}
+
+.form-horizontal .controls {
+	margin-left: 100px;
+}
+
+.form-horizontal .control-group {
+	margin-bottom: 10px;
+}
